@@ -1,0 +1,11 @@
+
+
+<h2>Entries</h2>
+
+{{#each entries}}
+	<p>
+	<a href="{{url}}">{{title}}</a><br/>
+	Published: {{moment published format="MMMM D, YYYY h:mm A"}}
+	</p>
+	
+{{/each}}

@@ -6,6 +6,7 @@
     "pretest": "jshint ."
   },
   "dependencies": {
+    "chalk": "^1.1.1",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "express-handlebars": "^2.0.1",

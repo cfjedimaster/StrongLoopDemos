@@ -43,5 +43,11 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "testContent": {
+    "dataSource": "db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

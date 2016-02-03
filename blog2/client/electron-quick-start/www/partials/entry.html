@@ -1,0 +1,20 @@
+<ion-view view-title="Blog Editor">
+
+	<ion-content class="padding has-header">
+
+
+		<div class="list list-inset">
+		<label class="item item-input">
+			<input type="text" placeholder="Title" ng-model="entry.title">
+		</label>
+		<label class="item item-input">
+			<textarea placeholder="Content" ng-model="entry.body"></textarea>
+		</label>
+		</div>
+
+		<button class="button button-full button-assertive" ng-click="doSave()"
+		ng-disabled="entry.title == '' || entry.body == ''">Save</button>
+
+	</ion-content>
+	
+</ion-view>

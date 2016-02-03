@@ -1,0 +1,19 @@
+<ion-view view-title="Login">
+
+	<ion-content class="padding has-header">
+		
+		<div class="list list-inset">
+		<label class="item item-input">
+			<input type="text" placeholder="Username" ng-model="user.username">
+		</label>
+		<label class="item item-input">
+			<input type="password" placeholder="Password" ng-model="user.password">
+		</label>
+		</div>
+		
+		<button class="button button-full button-assertive" ng-click="doLogin()"
+		ng-disabled="user.username == '' || user.password == ''">Login</button>
+		
+	</ion-content>
+	
+</ion-view>

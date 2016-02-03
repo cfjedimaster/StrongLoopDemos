@@ -1,0 +1,15 @@
+<ion-view view-title="Blog Editor">
+
+	<ion-content class="padding has-header">
+
+		<button class="button button-full button-assertive" ng-click2="doAdd()" ui-sref="root.EditEntry">Add Entry</button>
+		
+		<ion-list class="list-inset">
+			<ion-item ng-repeat="entry in entries">
+				[{{entry.published | date:'short'}}] {{entry.title}} 
+			</ion-item>
+		</ion-list>
+
+	</ion-content>
+	
+</ion-view>

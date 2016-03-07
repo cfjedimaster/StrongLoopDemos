@@ -1,0 +1,9 @@
+<h1>Edit</h1>
+
+<form method="post" action="/parts/save">
+	<input type="hidden" name="id" value="{{part.id}}">
+	<p>
+	<label for="name">Name:</label> <input type="text" name="name" id="name" value="{{part.name}}"><br/>
+	</p>
+	<input type="submit" value="Save">
+</form>

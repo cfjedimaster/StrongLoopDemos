@@ -1,0 +1,26 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Product": 5,
+    "Part": 4
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Product": {
+      "1": "{\"name\":\"productAlpha!\",\"price\":90,\"id\":1}",
+      "4": "{\"name\":\"moon\",\"price\":9,\"id\":4}"
+    },
+    "Part": {
+      "1": "{\"name\":\"partA!\",\"id\":1}",
+      "3": "{\"name\":\"partb\",\"id\":3}"
+    }
+  }
+}

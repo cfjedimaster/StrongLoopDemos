@@ -1,0 +1,47 @@
+<h1>Products</h1>
+
+<table border="1">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#each products}}
+		<tr>
+			<td><a href="/products/edit/{{id}}">{{name}}</a></td>
+			<td>{{price}}</td>
+			<td><a href="/products/delete/{{id}}">Delete</a></td>
+		</tr>
+	{{/each}}
+	</tbody>
+</table>
+
+<p>
+	<a href="/products/edit/0">Add New Product</a>
+</p>
+
+<h1>Parts</h1>
+
+<table border="1">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#each parts}}
+		<tr>
+			<td><a href="/parts/edit/{{id}}">{{name}}</a></td>
+			<td><a href="/parts/delete/{{id}}">Delete</a></td>
+		</tr>
+	{{/each}}
+	</tbody>
+</table>
+
+<p>
+	<a href="/parts/edit/0">Add New Part</a>
+</p>

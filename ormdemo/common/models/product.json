@@ -1,0 +1,27 @@
+{
+  "name": "Product",
+  "plural": "Products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "parts": {
+      "type": "hasMany",
+      "model": "Part",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

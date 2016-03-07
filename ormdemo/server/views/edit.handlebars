@@ -1,0 +1,12 @@
+<h1>Edit</h1>
+
+<form method="post" action="/products/save">
+	<input type="hidden" name="id" value="{{product.id}}">
+	<p>
+	<label for="name">Name:</label> <input type="text" name="name" id="name" value="{{product.name}}"><br/>
+	</p>
+	<p>
+	<label for="price">Price:</label> <input type="number" name="price" id="price" value="{{product.price}}"><br/>
+	</p>
+	<input type="submit" value="Save">
+</form>

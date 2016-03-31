@@ -33,11 +33,21 @@
     "public": false
   },
   "Product": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "mongodatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "Part": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "mongodatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "test": {
+    "dataSource": "mongodatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

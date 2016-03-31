@@ -10,7 +10,19 @@ var exphbs = require('express-handlebars');
 // We customize layoutsDir and views (few lines below) due to confusion of paths by default
 var hbs = exphbs.create({
 	defaultLayout:'main',
-	layoutsDir:__dirname+'/views/layouts'
+	layoutsDir:__dirname+'/views/layouts',
+	helpers:{
+		ifSelected:function(product,partid) {
+			if(!product) return '';
+			var parts = product.parts();
+			for(var i=0;i<parts.length;i++) {
+				if(String(parts[i].id) === String(partid)) {
+					return 'selected';				
+				}
+			}
+			return '';
+		}
+	}
 });
 
 app.engine('handlebars', hbs.engine);

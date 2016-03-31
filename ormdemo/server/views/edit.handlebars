@@ -8,5 +8,13 @@
 	<p>
 	<label for="price">Price:</label> <input type="number" name="price" id="price" value="{{product.price}}"><br/>
 	</p>
+	<p>
+	<label for="parts">Parts:</label>
+	<select name="parts" id="parts" multiple>
+		{{#each parts}}
+			<option value="{{id}}" {{ifSelected ../product id}}>{{name}}</option>
+		{{/each}}
+	</select>
+	</p>
 	<input type="submit" value="Save">
 </form>

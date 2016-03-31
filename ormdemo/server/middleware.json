@@ -41,9 +41,9 @@
     }
   },
   "files": {
-	  "loopback#static":{
-	  	"params":"$!./public"
-	  }
+    "loopback#static": {
+      "params": "$!./public"
+    }
   },
   "final": {
     "loopback#urlNotFound": {}

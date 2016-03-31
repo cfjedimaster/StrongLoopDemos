@@ -1,8 +1,8 @@
 {
-  "name": "Part",
-  "plural": "Parts",
+  "name": "test",
   "base": "PersistedModel",
-  "idInjection": true,
+  "strict": false,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
@@ -12,13 +12,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "products": {
-      "type": "hasAndBelongsToMany",
-      "model": "Product",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

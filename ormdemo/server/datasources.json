@@ -2,6 +2,11 @@
   "db": {
     "name": "db",
     "connector": "memory",
-	"file":"data.db"
+    "file": "data.db"
+  },
+  "mongodatasource": {
+    "database": "ormdemo",
+    "name": "mongodatasource",
+    "connector": "mongodb"
   }
 }

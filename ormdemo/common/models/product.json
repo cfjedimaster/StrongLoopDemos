@@ -17,7 +17,7 @@
   "validations": [],
   "relations": {
     "parts": {
-      "type": "hasMany",
+      "type": "hasAndBelongsToMany",
       "model": "Part",
       "foreignKey": ""
     }

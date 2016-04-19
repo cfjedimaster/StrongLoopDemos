@@ -1,0 +1,23 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Cat": 5
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Cat": {
+      "1": "{\"name\":\"paris cat\",\"location\":{\"lat\":48.87146,\"lng\":2.355},\"id\":1}",
+      "2": "{\"name\":\"san fran cat\",\"location\":{\"lat\":37.77493,\"lng\":-122.41942},\"id\":2}",
+      "3": "{\"name\":\"home cat\",\"location\":{\"lat\":30.22996,\"lng\":-92.05052},\"id\":3}",
+      "4": "{\"name\":\"dallas cat\",\"location\":{\"lat\":32.685,\"lng\":-96.73069},\"id\":4}"
+    }
+  }
+}

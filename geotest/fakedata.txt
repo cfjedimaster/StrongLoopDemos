@@ -1,0 +1,39 @@
+{
+  "name": "san fran cat",
+  "location": {
+    "lat": 37.77493,
+    "lng": -122.41942
+  }
+}
+
+{
+  "name": "paris cat",
+  "location": {
+    "lat": 48.87146,
+    "lng": 2.355
+  }
+}
+{
+  "name": "home cat",
+  "location": {
+    "lat": 30.22996,
+    "lng": -92.05052
+  }
+}
+{
+  "name": "dallas cat",
+  "location": {
+    "lat": 32.68500,
+    "lng": -96.73069
+  }
+}
+
+Sorted by closeness to home
+
+http://localhost:3000/api/Cats/?filter[where][location][near]=30.22996,-92.05052
+
+home 30.22996	-92.05052
+
+Not working:
+
+http://localhost:3000/api/Cats/?filter[where][and][0][location][near]=30.22996,-92.05052&filter[where][and][1][maxdistance][lt]=2000

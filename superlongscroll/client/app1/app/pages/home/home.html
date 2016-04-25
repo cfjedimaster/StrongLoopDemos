@@ -1,0 +1,22 @@
+<ion-navbar *navbar>
+	<ion-title>
+		Home
+	</ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+	
+	<ion-list [virtualScroll]="people" approxItemHeight="50px">
+		<ion-item *virtualItem="#person">
+			<ion-avatar item-left>
+				<ion-img [src]="person.picture" width="48" height="48"></ion-img>
+			</ion-avatar>
+			<h2>{{person.name}}</h2>
+		</ion-item>
+	</ion-list>
+
+ <ion-infinite-scroll (infinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+ 	
+</ion-content>

@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "note": {
+    "dataSource": "db"
+  },
+  "person": {
+    "dataSource": "db",
+    "public": true
+  }
+}

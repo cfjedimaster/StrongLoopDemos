@@ -5,6 +5,14 @@
 		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
+		<style>
+		img {
+			max-width: 200px;
+			max-height: 200px;
+			float: left;
+			margin-right: 20px;
+		}
+		</style>
 	</head>
 	<body>
 
@@ -12,23 +20,25 @@
 
 	<div id="catList"></div>
 
+	<br clear="all">
+	
 	<h1>Add Cat</h1>
 
 	<form id="addCatForm">
 
 	<p>
 	<label for="name">Name:</label>
-	<input type="text" id="name" required>
+	<input type="text" id="name" required value="foo">
 	</p>
 
 	<p>
 	<label for="age">Age:</label>
-	<input type="number" id="age" required>
+	<input type="number" id="age" required value="9">
 	</p>
 	
 	<p>
 	<label for="breed">Breed:</label>
-	<input type="text" id="breed" required>
+	<input type="text" id="breed" required value="mutt">
 	</p>
 
 	<p>

@@ -1,0 +1,28 @@
+Storage component - http://loopback.io/doc/en/lb2/Storage-component.html
+
+issues:
+
+containers/files
+
+its a datasource
+
+the name should be what? what im calling the property or something generic?
+make your folder
+make a subfolder?
+make a model
+
+{
+  "result": {
+    "files": {
+      "file": [
+        {
+          "container": "resume",
+          "name": "avatar.jpg",
+          "type": "image/jpeg",
+          "size": 5055
+        }
+      ]
+    },
+    "fields": {}
+  }
+}

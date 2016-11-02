@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+
+	<h1>Cats</h1>
+
+	<div id="catList"></div>
+
+	<h1>Add Cat</h1>
+
+	<form id="addCatForm">
+
+	<p>
+	<label for="name">Name:</label>
+	<input type="text" id="name" required>
+	</p>
+
+	<p>
+	<label for="age">Age:</label>
+	<input type="number" id="age" required>
+	</p>
+	
+	<p>
+	<label for="breed">Breed:</label>
+	<input type="text" id="breed" required>
+	</p>
+
+	<p>
+	<label for="picture">Picture:</label>
+	<input type="file" id="picture" accept="images/*">
+	</p>
+	
+	<p>
+	<label for="resume">Resume:</label>
+	<input type="file" id="resume" accept=".pdf">
+	</p>
+	
+	<input type="submit" value="Add Cat">
+
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+
+	</body>
+</html>

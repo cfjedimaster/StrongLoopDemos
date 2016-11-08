@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LB Security Demo</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+	</head>
+	<body>
+
+		<nav class="navbar navbar-light bg-faded">
+		<a class="navbar-brand" href="/">LB Security Demo</a>
+		<ul class="nav navbar-nav">
+			<li class="nav-item active">
+			<a class="nav-link" href="/">Home</a>
+			</li>
+			<li class="nav-item" id="loginLink">
+			<a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login/Register</a>
+			</li>			
+			<li class="nav-item" id="logoutLink" style="display:none">
+			<a class="nav-link" href="#" id="logout">Logout</a>
+			</li>			
+		</ul>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<h2>Feed</h2>
+					<div id="postsDiv"></div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="login" tabindex="-1" role="dialog"
+		aria-labelledby="loginLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				        <h4 class="modal-title" id="loginLabel">Login/Register</h4>
+				    </div>
+					<div class="modal-body">
+
+
+						<div id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="card">
+							<div class="card-header" role="tab" id="headingOne">
+							<h5 class="mb-0">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Login
+								</a>
+							</h5>
+							</div>
+
+							<div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div class="card-block">
+								<div id="loginErrorBlock"></div>
+								<form>
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input type="email" class="form-control" id="email" placeholder="Email" required> 
+									</div>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" class="form-control" id="password"  required> 
+									</div>
+									<button type="submit" class="btn btn-primary" id="loginButton">Login</button>
+								</form>
+							</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="headingTwo">
+							<h5 class="mb-0">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Register
+								</a>
+							</h5>
+							</div>
+							<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="card-block">
+								<div id="registerErrorBlock"></div>
+								<form>
+									<div class="form-group">
+										<label for="email2">Email</label>
+										<input type="email" class="form-control" id="email2" placeholder="Email"> 
+									</div>
+									<div class="form-group">
+										<label for="password2">Password</label>
+										<input type="password" class="form-control" id="password2"> 
+									</div>
+									<div class="form-group">
+										<label for="password2c">Confirm Password</label>
+										<input type="password" class="form-control" id="password2c"> 
+									</div>
+									<button type="submit" class="btn btn-primary" id="registerButton">Register</button>
+								</form>
+
+							</div>
+							</div>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+	<script src="js/app.js"></script>
+
+	</body>
+</html>

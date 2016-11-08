@@ -1,0 +1,25 @@
+Need to extend User (done)
+Need to hide User (public: false)
+
+No way to automatically say, "when making ob, set owner to me"
+Link A to B(where B extends user) * thats the magic
+
+
+the object X belongs to me if:
+
+[12:26]  
+a) it has a relation to a model that extends user (and obviously it points to me)
+
+[12:26]  
+b) it has a simple property called userId where the val matches my user ID
+
+[12:26]  
+c) ditto for "owner"
+
+
+When locking down a method - how do you know the names?
+    this list - http://apidocs.strongloop.com/loopback/#persistedmodel
+
+beforeSave, set to currentuser
+
+auth req error even though logged in

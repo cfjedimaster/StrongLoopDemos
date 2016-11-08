@@ -1,0 +1,43 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 10,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "post": 23,
+    "appuser": 5
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {
+      "AqL45B6g9iiMcTv8LFGuGFSsUuYPVawCBo2ugDpQT43ZmdSWTjJ9bNYc7mloBaD5": "{\"id\":\"AqL45B6g9iiMcTv8LFGuGFSsUuYPVawCBo2ugDpQT43ZmdSWTjJ9bNYc7mloBaD5\",\"ttl\":1209600,\"created\":\"2016-11-07T17:14:41.616Z\",\"userId\":1}",
+      "0DVkQecyU4mCDMxpJyvJ9GQbgZhjlmoWJOOuEGLVFH4K4xvbkYlCcLEdRDGZceC1": "{\"id\":\"0DVkQecyU4mCDMxpJyvJ9GQbgZhjlmoWJOOuEGLVFH4K4xvbkYlCcLEdRDGZceC1\",\"ttl\":1209600,\"created\":\"2016-11-07T18:30:59.622Z\",\"userId\":1}",
+      "BQJGfxNQVif2Owyb9LqjnQslTADYlXLayjYDNpWLY3imKUWNlcGxCvTaBx2ItM0L": "{\"id\":\"BQJGfxNQVif2Owyb9LqjnQslTADYlXLayjYDNpWLY3imKUWNlcGxCvTaBx2ItM0L\",\"ttl\":1209600,\"created\":\"2016-11-07T18:54:50.180Z\",\"userId\":1}",
+      "RuJRBDtCxMrnmiFQnng7EFByTMop6pc1lLNX7BDxFMBXBHEes6FUngWIu9Wh7rDD": "{\"id\":\"RuJRBDtCxMrnmiFQnng7EFByTMop6pc1lLNX7BDxFMBXBHEes6FUngWIu9Wh7rDD\",\"ttl\":1209600,\"created\":\"2016-11-08T20:09:55.649Z\",\"userId\":3}",
+      "ASfG7j6rJu2CQn1ywq5KcVxstqEZCazBOdWv0QCqFoECP05Ggom4yDPyQtFgab2g": "{\"id\":\"ASfG7j6rJu2CQn1ywq5KcVxstqEZCazBOdWv0QCqFoECP05Ggom4yDPyQtFgab2g\",\"ttl\":1209600,\"created\":\"2016-11-08T20:15:14.322Z\",\"userId\":4}",
+      "yW4ZOzNS3JGWzAztnfydCQUx6yG9AEqZPdcYzOva78VviIGnUSovEO4lACwrRin9": "{\"id\":\"yW4ZOzNS3JGWzAztnfydCQUx6yG9AEqZPdcYzOva78VviIGnUSovEO4lACwrRin9\",\"ttl\":1209600,\"created\":\"2016-11-08T23:07:33.274Z\",\"userId\":3}",
+      "7JDVRr7Nxk4kZTu0XjDRNalVzJrFg83dsqvmy2WzWQKKJMCKUipid98n9cMtjNhh": "{\"id\":\"7JDVRr7Nxk4kZTu0XjDRNalVzJrFg83dsqvmy2WzWQKKJMCKUipid98n9cMtjNhh\",\"ttl\":1209600,\"created\":\"2016-11-08T23:08:04.553Z\",\"userId\":3}",
+      "K62zp82lb0B5BvcmgrOL1Wo4Yo2nGShD2sPqTUEziDgryfF78HeT3GGW269PqmYB": "{\"id\":\"K62zp82lb0B5BvcmgrOL1Wo4Yo2nGShD2sPqTUEziDgryfF78HeT3GGW269PqmYB\",\"ttl\":1209600,\"created\":\"2016-11-08T23:14:50.980Z\",\"userId\":3}",
+      "4HWCh6TEYNRzCVicpSN64ndggyJWeDu0I7kEDTxTsqwjEyZkM16MlwiCIfu8cs35": "{\"id\":\"4HWCh6TEYNRzCVicpSN64ndggyJWeDu0I7kEDTxTsqwjEyZkM16MlwiCIfu8cs35\",\"ttl\":1209600,\"created\":\"2016-11-08T23:20:06.158Z\",\"userId\":3}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "post": {
+      "16": "{\"created\":\"2016-11-07T20:07:21.433Z\",\"text\":\"strsddksjdksjsdkjing\",\"ownerId\":1,\"id\":16}",
+      "17": "{\"created\":\"2016-11-08T16:22:13.781Z\",\"text\":\"test on the 8th\",\"ownerId\":1,\"id\":17}",
+      "18": "{\"created\":\"2016-11-08T16:27:18.115Z\",\"text\":\"test on the 8th part deux\",\"ownerId\":1,\"id\":18}",
+      "19": "{\"created\":\"2016-11-08T16:36:07.004Z\",\"text\":\"test on the 8th part three\",\"ownerId\":1,\"id\":19}",
+      "20": "{\"created\":\"2016-11-08T16:37:39.035Z\",\"text\":\"test on the 8th part 4\",\"ownerId\":1,\"id\":20}",
+      "21": "{\"created\":\"2016-11-08T16:57:48.601Z\",\"text\":\"sMOOOOOOOtring\",\"ownerId\":1,\"id\":21}",
+      "22": "{\"created\":\"2016-11-08T23:20:10.447Z\",\"text\":\"foo\",\"ownerId\":3,\"id\":22}"
+    },
+    "appuser": {
+      "1": "{\"password\":\"$2a$10$64cmhn7nw4TZnAoGJQJZket3AulLKemhDdOObhvaxHjPuxXWapEcW\",\"email\":\"user1@gmail.com\",\"id\":1}",
+      "2": "{\"password\":\"$2a$10$SIoKTp5QrPJubJ9IQS799.p9PVI1.hEvQwBe8ip3oUoBafWKgZS3u\",\"email\":\"user2@gmail.com\",\"id\":2}",
+      "3": "{\"password\":\"$2a$10$xLnnRgb9e6fF90bSw55lD.Myp.zmDSdAMaQrxsngXr69DhG6xlqqS\",\"email\":\"user3@gmail.com\",\"id\":3}",
+      "4": "{\"password\":\"$2a$10$xxjL3x7/WXNhykLj0o69nu/Ly/obXQ8dFXtDJJr6z54i7oth2J6oy\",\"email\":\"user4@gmail.com\",\"id\":4}"
+    }
+  }
+}

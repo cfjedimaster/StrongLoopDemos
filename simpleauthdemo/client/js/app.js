@@ -1,10 +1,11 @@
 var $postsDiv, $registerButton, $email, $password, $email2, $password2, $password2c, 
-	$registerErrorBlock, $loginLink, $logoutLink, $logout, $loginErrorBlock, $loginButton;
+	$registerErrorBlock, $loginLink, $logoutLink, $logout, $loginErrorBlock, $loginButton, 
+	$addPostBlock, $addPostForm, $addPostText;
 var token, userid;
 
 var lastCheck = new Date('1/1/2000');
 //how often to check for data
-var INTERVAL = 10 * 1000;
+var INTERVAL = 5 * 1000;
 
 $(document).ready(function() {
 	$postsDiv = $('#postsDiv');
@@ -20,21 +21,25 @@ $(document).ready(function() {
 	$logout = $('#logout');
 	$loginErrorBlock = $('#loginErrorBlock');
 	$loginButton = $('#loginButton');
+	$addPostBlock = $('#addPostBlock');
+	$addPostForm = $('#addPostForm');
+	$addPostText = $('#addPostText');
 
 	$loginButton.on('click', doLogin);
 	$registerButton.on('click', doRegister);
+	$logout.on('click', doLogout);
+	$addPostForm.on('submit', doMessage);
+
 	loadPosts();
 });
 
 function loadPosts() {
 
-	// sample url http://localhost:3000/api/posts?filter[include][creator]&filter[where][created][gte]=2016-11-08
 
 	var apiUrl = '/api/posts/?filter[include][creator]&filter[where][created][gte]='+encodeURIComponent(
 		lastCheck.toISOString()) + '&filter[order]=created%20desc';
 
 	$.get(apiUrl).then(function(res) {
-		console.log('Got '+res.length+' results.');
 		var html = '';
 		res.forEach(function(p) {
 			var card = `
@@ -89,6 +94,7 @@ function doRegister(e) {
 				token = res.id;
 				$('#login').modal('hide');
 				$loginLink.hide();
+				$addPostBlock.show();
 				$logoutLink.show();
 			});
 		}).catch(function(e) {
@@ -124,6 +130,7 @@ function doLogin(e) {
 			userid = res.userId;
 			$('#login').modal('hide');
 			$loginLink.hide();
+			$addPostBlock.show();
 			$logoutLink.show();
 		}).catch(function(e) {
 			var error = e.responseJSON.error.message;
@@ -138,17 +145,27 @@ function doLogin(e) {
 	}
 }
 
-function logout(e) {
+function doLogout(e) {
 	e.preventDefault();
-	$.post("/api/appusers/logout").then(function() {
+	$.ajax({
+		type:'post',
+		url:'/api/appusers/logout',
+		headers:{
+			'Authorization':token
+		}
+	}).then(function() {
 		userid = '';
 		token = '';
 		$logoutLink.hide();
+		$addPostBlock.hide();
 		$loginLink.show();
 	});
 }
 
-function doMessage(str) {
+function doMessage(e) {
+	e.preventDefault();
+	var str = $addPostText.val();
+	if(str === '') return;
 
 	var msg = {text:str};
 	$.ajax({
@@ -160,6 +177,7 @@ function doMessage(str) {
 		data:msg
 	}).then(function(res) {
 		console.log(res);
+		$addPostText.val('');
 	}).catch(function(e) {
 		console.log('error');
 		console.log(e);

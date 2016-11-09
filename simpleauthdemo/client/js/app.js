@@ -5,7 +5,7 @@ var token, userid;
 
 var lastCheck = new Date('1/1/2000');
 //how often to check for data
-var INTERVAL = 5 * 1000;
+var INTERVAL = 2 * 1000;
 
 $(document).ready(function() {
 	$postsDiv = $('#postsDiv');
@@ -30,8 +30,26 @@ $(document).ready(function() {
 	$logout.on('click', doLogout);
 	$addPostForm.on('submit', doMessage);
 
+	$(document).on('click', '.deletePost', deletePost);
+
 	loadPosts();
 });
+
+/*
+I'm called after login to update the wall to add delete buttons for your posts.
+*/
+function fixPosts() {
+	$('.post').each(function(idx,card) {
+		var creator = $(card).data("creatorid");
+		if(creator == userid) {
+			console.log('fixing '+$(card).data('postid'));
+			$('span.btnArea', card).html(`<button class="btn btn-danger deletePost">Delete</button>`);
+		}
+	});
+	/*
+				``;
+			*/
+}
 
 function loadPosts() {
 
@@ -42,11 +60,16 @@ function loadPosts() {
 	$.get(apiUrl).then(function(res) {
 		var html = '';
 		res.forEach(function(p) {
+			var btnText = '';
+			if(p.creator.id === userid) {
+				btnText = `<button class="btn btn-danger deletePost" data-id="${p.id}">Delete</button>`;
+			}
 			var card = `
-<div class="card">
+<div class="card post" data-postid="${p.id}" data-creatorid="${p.creator.id}">
   <div class="card-block">
     <h4 class="card-title">${p.creator.email} on ${niceDate(p.created)}</h4>
     <p class="card-text">${p.text}</p>
+	<span class='btnArea'>${btnText}</span>
   </div>
 </div>
 			`;
@@ -96,6 +119,7 @@ function doRegister(e) {
 				$loginLink.hide();
 				$addPostBlock.show();
 				$logoutLink.show();
+				fixPosts();
 			});
 		}).catch(function(e) {
 			console.log('catch block');
@@ -132,6 +156,7 @@ function doLogin(e) {
 			$loginLink.hide();
 			$addPostBlock.show();
 			$logoutLink.show();
+			fixPosts();
 		}).catch(function(e) {
 			var error = e.responseJSON.error.message;
 			console.log(error);
@@ -183,4 +208,19 @@ function doMessage(e) {
 		console.log(e);
 	});
 
+}
+
+function deletePost(e) {
+	e.preventDefault();
+	console.log('deletePost');
+	var parent = $(e.currentTarget).parent().parent().parent();
+	var postid = parent.data("postid");
+	console.log(postid);
+	$.ajax({
+		type:'delete',
+		url:'/api/posts/'+postid,
+		headers:{'Authorization':token}
+	}).then(function(res) {
+		parent.remove();
+	});
 }
